@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF09489D21875E160092D13F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF09489B21875E150092D13F /* Realm.framework */; };
+		EF09489E21875E160092D13F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF09489B21875E150092D13F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF09489F21875E160092D13F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF09489C21875E150092D13F /* RealmSwift.framework */; };
+		EF0948A021875E160092D13F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF09489C21875E150092D13F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF0948A32187C7060092D13F /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0948A22187C7060092D13F /* DBModel.swift */; };
 		EF7EF49D21873AB8005053CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EF49C21873AB8005053CE /* AppDelegate.swift */; };
 		EF7EF49F21873AB8005053CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EF49E21873AB8005053CE /* ViewController.swift */; };
 		EF7EF4A221873AB8005053CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7EF4A021873AB8005053CE /* Main.storyboard */; };
@@ -14,7 +19,25 @@
 		EF7EF4A721873ABD005053CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7EF4A521873ABD005053CE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EF0948A121875E160092D13F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF0948A021875E160092D13F /* RealmSwift.framework in Embed Frameworks */,
+				EF09489E21875E160092D13F /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EF09489B21875E150092D13F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		EF09489C21875E150092D13F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		EF0948A22187C7060092D13F /* DBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
 		EF7EF49921873AB8005053CE /* testRealm1029.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testRealm1029.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7EF49C21873AB8005053CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7EF49E21873AB8005053CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF09489F21875E160092D13F /* RealmSwift.framework in Frameworks */,
+				EF09489D21875E160092D13F /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +63,8 @@
 		EF7EF49021873AB7005053CE = {
 			isa = PBXGroup;
 			children = (
+				EF09489B21875E150092D13F /* Realm.framework */,
+				EF09489C21875E150092D13F /* RealmSwift.framework */,
 				EF7EF49B21873AB8005053CE /* testRealm1029 */,
 				EF7EF49A21873AB8005053CE /* Products */,
 			);
@@ -60,6 +87,7 @@
 				EF7EF4A321873ABD005053CE /* Assets.xcassets */,
 				EF7EF4A521873ABD005053CE /* LaunchScreen.storyboard */,
 				EF7EF4A821873ABD005053CE /* Info.plist */,
+				EF0948A22187C7060092D13F /* DBModel.swift */,
 			);
 			path = testRealm1029;
 			sourceTree = "<group>";
@@ -74,6 +102,7 @@
 				EF7EF49521873AB8005053CE /* Sources */,
 				EF7EF49621873AB8005053CE /* Frameworks */,
 				EF7EF49721873AB8005053CE /* Resources */,
+				EF0948A121875E160092D13F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +166,7 @@
 			files = (
 				EF7EF49F21873AB8005053CE /* ViewController.swift in Sources */,
 				EF7EF49D21873AB8005053CE /* AppDelegate.swift in Sources */,
+				EF0948A32187C7060092D13F /* DBModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +313,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testRealm1029/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +335,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testRealm1029/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
